@@ -1,0 +1,32 @@
+.revew-item{
+    width:570px;
+    border:2px solid rebeccapurple;
+    border-radius: 20px;
+    margin-bottom: 20px;
+   padding:10px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    margin-top: 10px;
+    
+  
+}
+.revew-item img{
+    width: 92px;
+    height: 92px;
+}
+
+.review-detels  p {
+    margin: 0 15px;
+}
+
+.review-detels{
+   flex-grow:1;
+}
+
+
+.button-delete{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
