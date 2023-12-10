@@ -7,3 +7,21 @@
     grid-template-columns: repeat(3 ,1fr);
     gap: 45px;
 }
+.proced-link{
+      text-decoration: none;
+}
+.btn-procure{
+    border: 2px solid orange;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+  justify-content: space-between;
+   
+}
+
+

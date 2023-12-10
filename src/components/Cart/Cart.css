@@ -9,3 +9,15 @@
 .cart-item p{
     font-size: 18px;
 }
+.clear-cart{
+
+    border: 2px solid orange;
+    padding: 20px;
+    width: 90%;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    font-size: 20px;
+}

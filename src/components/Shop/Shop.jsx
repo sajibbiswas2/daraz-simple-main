@@ -4,7 +4,10 @@ import './Shop.css';
 import { useEffect } from 'react';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
-import { addToDb, getShoppingCart } from '../../utlitis/fakdb';
+import { addToDb, getShoppingCart, removeFromDb } from '../../utlitis/fakdb';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
@@ -35,6 +38,8 @@ const Shop = () => {
         setCart(saveCart);
     }, [products])
 
+
+
     const handeladdtocart = (product) => {
         // let newcart = [];
         const newcart = [...cart, product]
@@ -54,6 +59,10 @@ const Shop = () => {
         addToDb(product.id)
     }
 
+    const handelcrlearCart = () => {
+        setCart([]);
+        removeFromDb();
+    }
 
     return (
         <div className='shop-container'>
@@ -67,9 +76,14 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart
+                    cart={cart}
+                    handelcrlearCart={handelcrlearCart}
+                >
+                    <Link className='proced-link' to="/Orders"><button className='btn-procure'>Review-oder <FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon> </button></Link>
+                </Cart>
             </div>
-        </div>
+        </div >
     );
 };
 
